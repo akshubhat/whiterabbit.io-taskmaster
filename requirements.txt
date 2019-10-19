@@ -4,7 +4,7 @@ asn1crypto==0.24.0
 billiard==3.3.0.23
 celery==3.1.26.post2
 cryptography==2.1.4
-Django==1.9.1
+Django==1.11.23
 django-celery==3.3.1
 enum34==1.1.6
 idna==2.6
