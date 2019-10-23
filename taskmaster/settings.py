@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasker.apps.TaskerConfig',
     'widget_tweaks',
+    #"djcelery",
 ]
 
 MIDDLEWARE = [

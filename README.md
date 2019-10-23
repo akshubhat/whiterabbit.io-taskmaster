@@ -5,33 +5,33 @@
 
 This is an example of asynchronus microservice using django and celery. Redis is used as task broker. Celery worker-node acts as a consumer of the task broker and runs the tasks. Therefore no callback scenario is available in this approach.
 
-###To install:
+### To install:
 	
 	pip3 install requirements.txt
 	python3 manage.py makemigrations
 	python3 manage.py migrate
 	python3 manage.py runserver
 
-###To create admin:
+### To create admin:
 	
 	python3 manage.py createsuperuser
 
-###To run the celeryd using django manage.py
+### To run the celeryd using django manage.py
 
 	$ python manage.py celeryd -l info
 	
-###Curl to the endpoint
+### Curl to the endpoint
 
 	$ curl -i http://localhost:8000/ping/
 	
-###To see the list of tasks in Redis
+### To see the list of tasks in Redis
 	
 	$ redis-server &
 
 	$ redis-cli
 	$ 127.0.0.1:6379> keys *
 
-###Testing
+### Testing
 
 Run these commands in different terminals:
 	
@@ -47,7 +47,7 @@ In python shell, create and test the task:
 	>>> print(f"id={task.id}, state={task.state}, status={task.status}")
 	>>> task.get()
 
-###References:
+### References:
 
 	https://stackabuse.com/asynchronous-tasks-in-django-with-redis-and-celery/
 	https://docs.djangoproject.com/en/2.2/intro/tutorial01/
